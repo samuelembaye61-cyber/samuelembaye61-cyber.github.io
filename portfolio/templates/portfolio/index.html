@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel Embaye | Software Engineer Portfolio</title>
+    <link rel="stylesheet" href="{% static 'portfolio/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Samuel Embaye</h1>
+        <p class="subtitle">Software Engineer / Full-Stack Developer</p>
+        <div class="header-links">
+            <a href="https://github.com/samuelembaye61-cyber" target="_blank">🔗 GitHub</a>
+            <a href="https://www.linkedin.com/in/samuel-embaye-184a69298/" target="_blank">🔗 LinkedIn</a>
+            <!-- Resume Link: Ensure you upload your resume.pdf to the same folder on GitHub -->
+            <a href="resume.pdf" target="_blank" class="resume-btn">📄 View Resume</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- About Section -->
+        <section class="about">
+            <h2>💻 About Me</h2>
+            <p>I am a passionate software engineer specializing in building clean, scalable, and user-centric applications. Proficient in modern web technologies, agile workflows, and test-driven development, I love solving complex technical puzzles and optimizing code performance.</p>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects">
+            <h2>🚀 My Projects</h2>
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <h3>[First Project Name]</h3>
+                    <div class="tags-container">
+                        <span class="tech-tag">React</span> 
+                        <span class="tech-tag">Node.js</span>
+                    </div>
+                    <p>Describe your project here. Focus on the problem you solved, the core architectural decisions you made, and what technical challenges you overcame.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/your-repo" target="_blank">View Code</a>
+                        <a href="#" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <h3>All united</h3>
+                    <div class="tags-container">
+                        <span class="tech-tag">Python</span> 
+                        <span class="tech-tag">HTML</span>
+                    </div>
+                    All United FC — Full Stack Web App
+
+               <p>A soccer club website built with Django REST Framework on the backend and Vanilla JavaScript on the frontend. Features a live team roster, match results and upcoming fixtures, and a player interest form 
+                    — all powered by a REST API and managed through Django's admin panel. Designed in a red and white club theme with a clean, responsive layout.
+                    Stack: Python · Django · JavaScript · HTML · CSS · SQLite </p>
+                    <div class="project-links">
+                        <a href="https://github.com/your-repo" target="_blank">View Code</a>
+                        <a href="#" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact">
+            <h2>📬 Get In Touch</h2>
+            <p>Have an open opportunity, a project idea, or just want to connect? Send a message directly to my inbox.</p>
+            
+            <!-- Formspree Integration Form -->
+            <form action="https://formspree.io" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required placeholder="Jane Doe">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" name="_replyto" id="email" required placeholder="jane@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="5" required placeholder="Hi! Let's talk about a software engineering role..."></textarea>
+                </div>
+                <!-- Prevent Formspree spam -->
+                <input type="text" name="_honey" style="display:none">
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 [Your Name]. Hosted securely on GitHub Pages.</p>
+    </footer>
+</body>
+</html>
