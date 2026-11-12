@@ -40,7 +40,7 @@
     </header>
 
     <main>
-      <section id="about" class="section container">
+      <section id="about" class="section container reveal">
         <div class="section-heading">
           <p class="kicker">About Me</p>
           <h2>Engineer with a product mindset.</h2>
@@ -60,7 +60,7 @@
         </div>
       </section>
 
-      <section id="projects" class="section alt-bg">
+      <section id="projects" class="section alt-bg reveal">
         <div class="container">
           <div class="section-heading">
             <p class="kicker">Projects</p>
@@ -68,7 +68,7 @@
           </div>
 
           <div class="projects-grid">
-            <article class="project-card">
+            <article class="project-card reveal">
               <div class="project-topline">Python · Django · JavaScript · HTML · CSS</div>
               <h3>All United FC</h3>
               <p>
@@ -87,7 +87,7 @@
               </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card reveal">
               <div class="project-topline">Python · Django · Cloud</div>
               <h3>Portfolio Website</h3>
               <p>
@@ -108,7 +108,7 @@
         </div>
       </section>
 
-      <section id="contact" class="section container">
+      <section id="contact" class="section container reveal">
         <div class="section-heading">
           <p class="kicker">Contact</p>
           <h2>Let’s build something meaningful.</h2>
@@ -132,5 +132,26 @@
         <p>© 2026 Samuel Embaye</p>
       </div>
     </footer>
+    <script>
+      const revealItems = document.querySelectorAll(".reveal");
+
+      if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15 }
+        );
+
+        revealItems.forEach((item) => revealObserver.observe(item));
+      } else {
+        revealItems.forEach((item) => item.classList.add("is-visible"));
+      }
+    </script>
   </body>
 </html>
